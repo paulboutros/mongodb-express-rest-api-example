@@ -9,6 +9,9 @@ export default function App() {
 
   useEffect(() => {
     const loadPosts = async () => {
+
+     //console ( `   fetch   baseUrl = ${baseUrl}`)
+
       let results = await fetch(`${baseUrl}/posts/`).then(resp => resp.json());
       setPosts(results);
     }

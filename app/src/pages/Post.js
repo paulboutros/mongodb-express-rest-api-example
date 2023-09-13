@@ -46,11 +46,11 @@ export default function App() {
   useEffect(() => {
     const loadPost = async () => {
       let results = await fetch(`${baseUrl}/posts/${params.id}`).then(resp => resp.json());
-      setPost(results);
+       setPost(results);
     }
 
     loadPost();
-  }, []);
+  }, [] ); // paul boutros added: [params.id] instead of [params.id] 
 
   return (
     <React.Fragment>
